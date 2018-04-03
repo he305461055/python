@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://E:/FLASK_01/.idea/FLASK_01.iml" filepath="E:/FLASK_01/.idea/FLASK_01.iml" />
+      <module fileurl="file://$USER_HOME$/taobaospider/.idea/project.iml" filepath="$USER_HOME$/taobaospider/.idea/project.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/python.iml" filepath="$PROJECT_DIR$/.idea/python.iml" />
+      <module fileurl="file://D:/sina/sina/.idea/sina.iml" filepath="D:/sina/sina/.idea/sina.iml" />
+    </modules>
+  </component>
+</project>
