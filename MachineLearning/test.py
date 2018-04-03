@@ -397,15 +397,80 @@ if __name__=='__main__':
 
      #plt.plot([1,2,3],[4,5,6])
      #plt.show()
-     x = [1, 2, 3]
-     y = [5, 7, 4]
+     # x = [1, 2, 3]
+     # y = [5, 7, 4]
+     #
+     # x2 = [1, 2, 3]
+     # y2 = [10, 14, 12]
+     # plt.plot(x,y,label='First Line')
+     # plt.plot(x2,y2,label='Second Line')
+     # plt.xlabel('Plot Number')
+     # plt.ylabel('Important var')
+     # plt.title('Interesting Graph\nCheck it out')
+     # plt.legend()
+     # plt.show()
 
-     x2 = [1, 2, 3]
-     y2 = [10, 14, 12]
-     plt.plot(x,y,label='First Line')
-     plt.plot(x2,y2,label='Second Line')
-     plt.xlabel('Plot Number')
-     plt.ylabel('Important var')
-     plt.title('Interesting Graph\nCheck it out')
-     plt.legend()
+     # plt.bar([1,3,5,7,9],[5,2,7,8,2],label='Example one')
+     # plt.bar([2, 4, 6, 8, 10], [8, 6, 2, 5, 6], label="Example two", color='g')
+     #
+     # plt.xlabel('bar number')
+     # plt.ylabel('bar height')
+     # plt.title('Epic Graph\nAnother Line! Whoa')
+     # plt.legend()
+     # plt.show()
+
+     # population_ages = [22, 55, 62, 45, 21, 22, 34, 42, 42, 4, 99, 102, 110, 120, 121, 122, 130, 111, 115, 112, 80, 75,
+     #                    65, 54, 44, 43, 42, 48]
+     # bins = [0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 110, 120, 130]
+     # plt.hist(population_ages,bins,histtype='bar',rwidth=0.5)
+     # plt.xlabel('X')
+     # plt.ylabel('Y')
+     # plt.title('Interesting Graph\nCheck it out')
+     # plt.legend()
+     # plt.show()
+
+     # x = [1, 2, 3, 4, 5, 6, 7, 8]
+     # y = [5, 2, 4, 2, 1, 4, 5, 2]
+     # plt.scatter(x,y,label='skitscat',color='k',s=25,marker='o')
+     # plt.xlabel('X')
+     # plt.ylabel('Y')
+     # plt.title('Interesting Graph\nCheck it out')
+     # plt.legend()
+     # plt.show()
+
+     from mpl_toolkits.mplot3d import axes3d
+     import numpy as np
+     from matplotlib import style
+     style.use('ggplot')
+
+     fig = plt.figure()
+     ax1 = fig.add_subplot(111,projection='3d')
+     x,y,z=axes3d.get_test_data()
+     print(axes3d.__file__)
+     ax1.plot_wireframe(x, y, z, rstride=3, cstride=3)
+     ax1.set_xlabel('x_axis')
+     ax1.set_ylabel('y axis')
+     ax1.set_zlabel('z axis')
+     plt.show()
+
+     # 二次抛物面 z = x^2 + y^2
+
+     x = np.linspace(-10, 10, 101)
+     y = x
+     x, y = np.meshgrid(x, y)
+     z = x ** 2 + y ** 2
+     ax = plt.subplot(111, projection='3d')
+     ax.plot_wireframe(x, y, z)
+     plt.show()
+
+     # 半径为 1 的球
+
+     t = np.linspace(0, np.pi * 2, 100)
+     s = np.linspace(0, np.pi, 100)
+     t, s = np.meshgrid(t, s)
+     x = np.cos(t) * np.sin(s)
+     y = np.sin(t) * np.sin(s)
+     z = np.cos(s)
+     ax = plt.subplot(111, projection='3d')
+     ax.plot_wireframe(x, y, z)
      plt.show()
